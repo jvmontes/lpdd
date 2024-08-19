@@ -58,4 +58,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - PostgreSQL
 - Drizzle ORM
 
+You can use a local database installing postgresql and [dbeaver](https://dbeaver.io/download/) applications
+
+```
+brew install postgresql
+```
+
+Another easier way is to use supabase or render database instances. You can find the env variables in the dashboard for those services.
+
 NOTE: More details [here](drizzle/README.md)
