@@ -1,3 +1,7 @@
 export default function Page() {
-  return <p>Contact Page</p>;
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      Contact Page
+    </main>
+  );
 }
