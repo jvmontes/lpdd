@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Directory from "./ui/directory";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       </div>
 
       <div>
-        <p>Placeholder Directory</p>
+        <h1>Latiné Professional Development Directory</h1>
+        <Directory></Directory>
       </div>
     </main>
   );
