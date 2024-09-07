@@ -2,7 +2,7 @@ import DirectoryOrg from "./directory-org";
 
 export default function Directory() {
   return (
-    <div className="p-6 w-3/4">
+    <div className="w-10/12 md:w-3/4">
       <h1 className="text-center pb-8">Directory</h1>
       {/* Header with search bar and industry tags */}
       <div className="mb-6">
