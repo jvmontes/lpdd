@@ -3,7 +3,7 @@ import Directory from "./ui/directory";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-2">
       <div>
         <p>Placeholder Hero Image</p>
       </div>
@@ -17,7 +17,9 @@ export default function Home() {
       </div>
 
       <div>
-        <h1>Latiné Professional Development Directory</h1>
+        <h1 className="text-center">
+          Latiné Professional Development Directory
+        </h1>
         <Directory></Directory>
       </div>
     </main>
