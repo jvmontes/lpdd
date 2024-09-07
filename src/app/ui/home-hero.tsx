@@ -16,7 +16,7 @@ export default function HomeHero() {
     <section className="relative w-full h-[50vh] md:h-[75vh] bg-slate-900">
       <div className="absolute bottom-[10%] md:bottom-[20%] left-[5%]">
         <h1
-          className={`${lexendMedium.className} text-white text-base md:text-3xl pb-1 md:pb-3`}
+          className={`${lexendMedium.className} text-white text-2xl md:text-3xl pb-3`}
         >
           Latiné Professional Development Directory
         </h1>
