@@ -16,12 +16,7 @@ export default function Home() {
         <p>Placeholder Featured Organizations</p>
       </div>
 
-      <div>
-        <h1 className="text-center">
-          Latiné Professional Development Directory
-        </h1>
-        <Directory></Directory>
-      </div>
+      <Directory></Directory>
     </main>
   );
 }
