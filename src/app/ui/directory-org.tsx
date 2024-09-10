@@ -16,7 +16,7 @@ export default function DirectoryOrg({
   return (
     <div className="flex items-center p-4 bg-white shadow rounded-lg">
       {/* Organization Logo */}
-      <div className="w-16 h-16 mr-4">
+      <div className="w-16 md:w-32 h-16 md:h-32 mr-4 flex-shrink-0">
         <Image
           src={logo}
           alt={`${title} logo`}
