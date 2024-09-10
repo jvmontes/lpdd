@@ -1,6 +1,6 @@
 import { Koulen } from "next/font/google";
 import { Lexend } from "next/font/google";
-import Image from 'next/image';
+import Image from "next/image";
 
 const koulen = Koulen({
   weight: "400",
@@ -20,7 +20,7 @@ export default function HomeHero() {
           src="/hero.jpg"
           width={2048}
           height={1365}
-          className="w-full h-full object-cover object-[0%_80%]"
+          className="w-full h-full object-cover object-[0%_80%] opacity-40"
           alt="Group of people listening to a panel discussion with panelists seated on stage."
         />
       </div>
