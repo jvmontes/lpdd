@@ -20,12 +20,14 @@ export default function NavLinks() {
   return (
     <div className="flex justify-end">
       {links.map((link) => {
+        const isActiveLink = pathname === link.href;
+
         return (
           <Link key={link.name} href={link.href}>
             <p
               className={clsx(
                 "px-4",
-                pathname === link.href && "text-gray-800 underline"
+                isActiveLink ? "text-gray-800 underline" : "text-blue-800"
               )}
             >
               {link.name}

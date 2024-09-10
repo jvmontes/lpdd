@@ -20,5 +20,8 @@ export default defineConfig({
   schema: './drizzle/schema.ts',
   out: './drizzle',
   dialect: 'postgresql',
-  dbCredentials, // url: process.env.POSTGRES_URL!,
+  dbCredentials,
+  migrations: {
+    prefix: 'timestamp',
+  },
 });
