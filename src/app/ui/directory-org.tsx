@@ -14,7 +14,7 @@ export default function DirectoryOrg({
   industry,
 }: DirectoryOrgProps) {
   return (
-    <div className="flex items-center p-4 bg-white shadow rounded-lg">
+    <div className="cursor-pointer flex items-center p-4 bg-white shadow rounded-lg hover:bg-[rgba(94,129,244,.1)] transition ease-in-out duration-200">
       {/* Organization Logo */}
       <div className="w-16 md:w-32 h-16 md:h-32 mr-4 flex-shrink-0">
         <Image
