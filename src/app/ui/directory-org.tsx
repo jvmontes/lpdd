@@ -1,12 +1,16 @@
+import Image from "next/image";
+
 export default function DirectoryOrg({ logo, title, description, industry }) {
   return (
     <div className="flex items-center p-4 bg-white shadow rounded-lg">
       {/* Organization Logo */}
       <div className="w-16 h-16 mr-4">
-        <img
+        <Image
           src={logo}
           alt={`${title} logo`}
-          className="w-full h-full object-cover rounded-full"
+          width={200}
+          height={200}
+          className="w-full h-full object-scale-down rounded-md"
         />
       </div>
 

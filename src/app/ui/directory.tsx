@@ -4,8 +4,7 @@ const testData = [
   {
     id: 1,
     name: "Techqueria",
-    logo_url:
-      "https://techqueria.org/wp-content/uploads/2019/02/techqueria-logo.png",
+    logo_url: "/org-logos/techqueria/techqueria-logo.png",
     description:
       "Techqueria is the largest global community of Latinx professionals in tech.",
     industry: ["Tech"],
@@ -16,7 +15,7 @@ const testData = [
   {
     id: 2,
     name: "ALPFA",
-    logo_url: "https://www.alpfa.org/resource/resmgr/logos/alpfa_logo.png",
+    logo_url: "/org-logos/alpfa/alpfa-logo.png",
     description:
       "ALPFA provides leadership development and career opportunities for Latinx professionals.",
     industry: ["Professional Services"],
@@ -27,7 +26,7 @@ const testData = [
   {
     id: 6,
     name: "1871",
-    logo_url: "https://1871.com/wp-content/uploads/2019/05/1871_logo.png",
+    logo_url: "/org-logos/1871/1871-logo.png",
     description:
       "1871 is a tech hub providing resources to help entrepreneurs build successful businesses.",
     industry: ["Tech", "Incubator", "Venture Capital"],
