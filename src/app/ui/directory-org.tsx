@@ -1,6 +1,18 @@
 import Image from "next/image";
 
-export default function DirectoryOrg({ logo, title, description, industry }) {
+interface DirectoryOrgProps {
+  logo: string;
+  title: string;
+  description: string;
+  industry: string;
+}
+
+export default function DirectoryOrg({
+  logo,
+  title,
+  description,
+  industry,
+}: DirectoryOrgProps) {
   return (
     <div className="flex items-center p-4 bg-white shadow rounded-lg">
       {/* Organization Logo */}
