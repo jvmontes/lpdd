@@ -9,10 +9,10 @@ const testData = [
     logo_url: "/org-logos/techqueria/techqueria-logo.png",
     description:
       "Techqueria is the largest global community of Latinx professionals in tech.",
-    industry: ["Tech"],
+    industry_tags: ["Tech & Engineering"],
     locations: ["Chicago", "New York", "Los Angeles", "+4 more"],
     latino_serving: true,
-    affinities: ["Latino", "Tech"],
+    affinities: ["Latino"],
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const testData = [
     logo_url: "/org-logos/alpfa/alpfa-logo.png",
     description:
       "ALPFA provides leadership development and career opportunities for Latinx professionals.",
-    industry: ["Professional Services"],
+    industry_tags: ["Professional Services"],
     locations: ["Chicago", "New York", "+2 more"],
     latino_serving: true,
     affinities: ["Latino", "Professional Services"],
@@ -31,7 +31,7 @@ const testData = [
     logo_url: "/org-logos/1871/1871-logo.png",
     description:
       "1871 is a tech hub providing resources to help entrepreneurs build successful businesses.",
-    industry: ["Tech", "Incubator", "Venture Capital"],
+    industry_tags: ["Tech", "Incubator", "Venture Capital"],
     locations: ["Chicago"],
     latino_serving: false,
     affinities: ["Tech", "Women-serving", "Latino Programming"],
@@ -120,7 +120,7 @@ export default function Directory() {
             title={org.name}
             logo={org.logo_url}
             description={org.description}
-            industry={org.industry[0]}
+            industry_tags={org.industry_tags}
           />
         ))}
       </div>
