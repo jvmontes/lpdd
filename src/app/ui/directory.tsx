@@ -78,18 +78,12 @@ export default function Directory() {
       <h1 className="text-center pb-8 text-2xl">Directory</h1>
 
       {/* Search bar and filter */}
-      <div className="mb-6">
-        <input
-          type="text"
-          placeholder="Search organizations..."
-          className="w-full p-2 border border-gray-300 rounded-lg"
-        />
-
-        <div className="relative mt-4">
+      <div className="mb-6 md:flex md:gap-x-2">
+        <div className="md:h-12 md:w-1/2 relative mt-4 md:mt-0">
           <button
             ref={industryDropdownButtonRef}
             onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-            className="px-4 py-2 bg-gray-200 rounded-lg text-sm"
+            className="w-full px-4 py-2 md:h-full bg-gray-200 rounded-lg text-sm"
           >
             Filter by Industry
           </button>
@@ -111,6 +105,11 @@ export default function Directory() {
             </div>
           )}
         </div>
+        <input
+          type="text"
+          placeholder="Search organizations..."
+          className="w-full md:w-1/2 md:h-12 mt-4 md:mt-0 p-2 border border-gray-300 rounded-lg"
+        />
       </div>
 
       <div className="grid gap-4">
