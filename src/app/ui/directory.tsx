@@ -48,7 +48,7 @@ export default function Directory() {
           <button
             ref={industryDropdownButtonRef}
             onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-            className="w-full px-4 py-2 md:h-full bg-gray-200 rounded-lg text-sm"
+            className="w-full px-4 py-2 md:h-full bg-amber-300 rounded-lg text-sm"
           >
             Filter by Industry
           </button>
