@@ -58,11 +58,11 @@ export default function Filter({
   };
 
   return (
-    <div className="md:h-12 md:w-1/2 relative mt-4 md:mt-0">
+    <div className="md:w-1/2 relative mt-4 md:mt-0">
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`w-full flex items-center justify-between px-4 py-2 md:h-full bg-[#f0d07d] transition-all ease-out duration-300 ${
+        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-[#f0d07d] transition-all ease-out duration-300 ${
           isIndustryDropdownOpen
             ? "rounded-t-lg font-semibold"
             : "rounded-lg font-normal"
@@ -82,7 +82,7 @@ export default function Filter({
       </button>
 
       <div
-        className={`w-full flex  flex-wrap gap-2 ${
+        className={`w-full flex flex-wrap gap-2 ${
           selectedIndustries.length === 0 ? "mt-0" : "mt-4"
         } ${isIndustryDropdownOpen ? "hidden" : "block"}`}
       >
