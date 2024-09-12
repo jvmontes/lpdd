@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import DirectoryOrg from "./directory-org";
 import mockDirectoryData from "../mock/mock-directory";
 import { Industry } from "../types";
-import Image from "next/image";
-import filterIcon from "./icons/filter.png";
-import xIcon from "./icons/x.png";
 
 import Filter from "./filter";
 
