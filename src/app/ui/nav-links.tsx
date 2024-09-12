@@ -23,25 +23,28 @@ const links = [
   },
 ];
 
+
 export default function NavLinks() {
   const pathname = usePathname();
+  
+  const baseClasses = "text-[0.70rem] pr-2 tracking-tighter sm:text-sm sm:pl-8 sm:tracking-normal";
+  const activeClasses = "text-blue-300 underline scale-95";
+  const inactiveClasses = "text-white";
+  
   return (
-    <div className="flex justify-end">
-      {links.map((link) => {
-        const isActiveLink = pathname === link.href;
+    <div className="flex">
+      {links.map(({ name, href}) => {
+        const isActiveLink = pathname === href;
 
         return (
-          <Link key={link.name} href={link.href} className="flex items-center">
+          <Link key={name} href={href} className="flex items-center">
             <p
               className={clsx(
-                // text-xs, sm, base
-                // tracking-tighter, tight, normal
-                // light, extralight
-                "text-[0.70rem] pl-2 tracking-tighter",
-                isActiveLink ? "text-white underline" : "text-white"
+                baseClasses,
+                isActiveLink ? activeClasses : inactiveClasses
               )}
             >
-              {link.name}
+              {name}
             </p>
           </Link>
         );
