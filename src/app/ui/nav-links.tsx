@@ -27,7 +27,7 @@ export default function NavLinks() {
             <p
               className={clsx(
                 "px-4",
-                isActiveLink ? "text-gray-800 underline" : "text-blue-800"
+                isActiveLink ? "text-white underline" : "text-white"
               )}
             >
               {link.name}

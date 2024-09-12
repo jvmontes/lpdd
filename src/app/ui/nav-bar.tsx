@@ -1,13 +1,25 @@
+'use client';
+
 import Link from "next/link";
 import NavLinks from "./nav-links";
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
+  const pathname = usePathname();
+  const classes = "w-full h-16 text-white flex flex-col justify-center";
+  const navbarClasses = pathname === '/'
+    ? classes + " absolute z-10"
+    : classes + " bg-slate-600"; // change to slate-900
+
   return (
-    <div className="w-full justify-between flex h-8 text-blue-800">
-      <Link href="/">
-        <p className="px-4">Home</p>
-      </Link>
-      <NavLinks />
-    </div>
+    <nav className={navbarClasses}>
+      <div className="w-full flex justify-between px-4">
+        <Link href="/">
+          <p className="">LPDD</p>
+        </Link>
+        <NavLinks />
+      </div>
+    </nav>
   );
 }
+
