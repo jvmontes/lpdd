@@ -18,7 +18,7 @@ const mockDirectoryData: DirectoryOrgType[] = [
     logo_url: "/org-logos/alpfa/alpfa-logo.png",
     description:
       "ALPFA provides leadership development and career opportunities for Latinx professionals.",
-    industry_tags: [Industry.ProfessionalServices],
+    industry_tags: [Industry.ProfessionalServices, Industry.Finance],
     locations: ["Chicago", "New York", "+2 more"],
     latino_serving: true,
     affinities: ["Latino", "Professional Services"],
