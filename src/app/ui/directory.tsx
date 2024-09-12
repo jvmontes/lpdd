@@ -10,22 +10,20 @@ export default function Directory() {
   const [isIndustryDropdownOpen, setIsIndustryDropdownOpen] = useState(false);
   const [selectedIndustries, setSelectedIndustries] = useState<Industry[]>([]);
 
-  const industries: Industry[] = [
-    Industry.Tech,
-    Industry.Healthcare,
-    Industry.Finance,
-    Industry.ProfessionalServices,
-    Industry.VentureCapital,
-  ].sort();
+  const industries: Industry[] = Object.values(Industry).sort((a, b) =>
+    a.localeCompare(b)
+  );
 
   return (
     <section className="flex flex-col items-center justify-between pt-8">
       <h1 className="text-center pb-8 text-2xl">Directory</h1>
-      <div className="w-10/12 md:w-3/4 shadow rounded-lg bg-white p-4">
+      <div className="w-10/12 md:w-3/4 shadow rounded-lg bg-white p-4 min-w-[325px] min-h-[760px] md:min-h-[620px] md:min-w-[684px]">
         {/* Search bar and filter */}
         <div className="mb-6 md:flex md:gap-x-2">
           <Filter
             industries={industries}
+            selectedIndustries={selectedIndustries}
+            setSelectedIndustries={setSelectedIndustries}
             isIndustryDropdownOpen={isIndustryDropdownOpen}
             setIsIndustryDropdownOpen={setIsIndustryDropdownOpen}
           />
@@ -38,9 +36,19 @@ export default function Directory() {
         </div>
 
         <div className="grid gap-4">
-          {mockDirectoryData.map((org) => (
-            <DirectoryOrg key={org.id} {...org} />
-          ))}
+          {mockDirectoryData
+            .filter((org) => {
+              if (selectedIndustries.length === 0) {
+                return true;
+              }
+
+              return org.industry_tags.some((tag) =>
+                selectedIndustries.includes(tag)
+              );
+            })
+            .map((org) => (
+              <DirectoryOrg key={org.id} {...org} />
+            ))}
         </div>
       </div>
     </section>

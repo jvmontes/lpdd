@@ -6,12 +6,16 @@ import { Industry } from "../types";
 
 interface FilterProps {
   industries: Industry[];
+  selectedIndustries: Industry[];
+  setSelectedIndustries: (industries: Industry[]) => void;
   isIndustryDropdownOpen: boolean;
   setIsIndustryDropdownOpen: (isOpen: boolean) => void;
 }
 
 export default function Filter({
   industries,
+  selectedIndustries,
+  setSelectedIndustries,
   isIndustryDropdownOpen,
   setIsIndustryDropdownOpen,
 }: FilterProps) {
@@ -37,6 +41,13 @@ export default function Filter({
     };
   }, [setIsIndustryDropdownOpen]);
 
+  const handleIndustryChange = (industry: Industry) => {
+    if (selectedIndustries.includes(industry)) {
+      setSelectedIndustries(selectedIndustries.filter((i) => i !== industry));
+    } else {
+      setSelectedIndustries([...selectedIndustries, industry]);
+    }
+  };
   return (
     <div className="md:h-12 md:w-1/2 relative mt-4 md:mt-0">
       <button
@@ -60,7 +71,11 @@ export default function Filter({
         >
           {industries.map((industry) => (
             <label key={industry} className="flex items-center space-x-2 mb-2">
-              <input type="checkbox"></input>
+              <input
+                type="checkbox"
+                checked={selectedIndustries.includes(industry)}
+                onChange={() => handleIndustryChange(industry)}
+              ></input>
               <span>{industry}</span>
             </label>
           ))}

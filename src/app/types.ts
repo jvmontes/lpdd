@@ -15,6 +15,7 @@ export enum Industry {
   Finance = "Finance",
   ProfessionalServices = "Professional Services",
   VentureCapital = "Venture Capital",
+  Cybersecurity = "Cybersecurity",
 }
 
 export enum Affinity {
