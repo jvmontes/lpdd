@@ -24,11 +24,16 @@ export default function DirectoryOrg({
       <div>
         <h3 className="text-xl font-semibold">{name}</h3>
         <p className="text-gray-600 text-sm md:text-base">{description}</p>
-        <p className="mt-1 text-sm text-gray-400">
-          {industry_tags.map((industry_tag) => (
-            <span key={industry_tag}> {industry_tag}</span>
+        <div className="mt-1 flex flex-wrap gap-2 text-sm">
+          {industry_tags.map((industry_tag, index) => (
+            <div
+              key={index}
+              className="flex text-xs items-center space-x-2 bg-blue-50 rounded-full px-3 py-1"
+            >
+              <span> {industry_tag}</span>
+            </div>
           ))}
-        </p>
+        </div>
       </div>
     </div>
   );
