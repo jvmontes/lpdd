@@ -6,20 +6,20 @@ import clsx from "clsx";
 
 const links = [
   {
-    name: "About",
+    name: "ABOUT",
     href: "/about",
   },
   {
-    name: "Contact",
+    name: "CONTACT",
     href: "/contact",
   },
   {
-    name: "Placeholder",
-    href: "/contact",
+    name: "PLACEHOLDER",
+    href: "/placeholder",
   },
   {
-    name: "Login",
-    href: "/contact",
+    name: "LOGIN",
+    href: "/login",
   },
 ];
 
@@ -34,7 +34,10 @@ export default function NavLinks() {
           <Link key={link.name} href={link.href} className="flex items-center">
             <p
               className={clsx(
-                "px-4",
+                // text-xs, sm, base
+                // tracking-tighter, tight, normal
+                // light, extralight
+                "text-[0.70rem] pl-2 tracking-tighter",
                 isActiveLink ? "text-white underline" : "text-white"
               )}
             >
