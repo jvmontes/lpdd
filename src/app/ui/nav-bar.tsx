@@ -15,7 +15,7 @@ export default function NavBar() {
     <nav className={navbarClasses}>
       <div className="w-full flex justify-between px-4">
         <Link href="/">
-          <p className="">LPDD</p>
+          <p className="text-2xl">LPDD</p>
         </Link>
         <NavLinks />
       </div>

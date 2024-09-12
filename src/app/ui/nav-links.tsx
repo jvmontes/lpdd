@@ -13,6 +13,14 @@ const links = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Placeholder",
+    href: "/contact",
+  },
+  {
+    name: "Login",
+    href: "/contact",
+  },
 ];
 
 export default function NavLinks() {
@@ -23,7 +31,7 @@ export default function NavLinks() {
         const isActiveLink = pathname === link.href;
 
         return (
-          <Link key={link.name} href={link.href}>
+          <Link key={link.name} href={link.href} className="flex items-center">
             <p
               className={clsx(
                 "px-4",
