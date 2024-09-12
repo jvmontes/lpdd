@@ -1,8 +1,10 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
-import filterIcon from "./icons/filter.png";
-import xIcon from "./icons/x.png";
+import filterIcon from "./icons/filter.svg";
+import xIcon from "./icons/x.svg";
+import checkmarkIcon from "./icons/checkmark.svg";
 import { Industry } from "../types";
+import "./styles/checkbox.css";
 
 interface FilterProps {
   industries: Industry[];
@@ -61,7 +63,7 @@ export default function Filter({
         } `}
       >
         <div className="flex items-center">
-          <Image src={filterIcon} alt="Filter Icon" width={20} height={20} />
+          <Image src={filterIcon} alt="Filter Icon" width={20} height={16} />
           <span className="ml-2">Filter by Industry</span>
         </div>
         <div
@@ -84,7 +86,6 @@ export default function Filter({
         {industries.map((industry) => (
           <label key={industry} className="flex items-center space-x-2 mb-2">
             <input
-              className="cursor-pointer"
               type="checkbox"
               checked={selectedIndustries.includes(industry)}
               onChange={() => handleIndustryChange(industry)}
