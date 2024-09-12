@@ -51,6 +51,12 @@ export default function Filter({
     }
   };
 
+  const removeIndustry = (industryToRemove: Industry) => {
+    setSelectedIndustries(
+      selectedIndustries.filter((industry) => industry !== industryToRemove)
+    );
+  };
+
   return (
     <div className="md:h-12 md:w-1/2 relative mt-4 md:mt-0">
       <button
@@ -74,6 +80,23 @@ export default function Filter({
           <Image src={xIcon} alt="Close Filter" width={14} height={14} />
         </div>
       </button>
+
+      <div
+        className={`w-full flex  flex-wrap gap-2 ${
+          selectedIndustries.length === 0 ? "mt-0" : "mt-4"
+        } ${isIndustryDropdownOpen ? "hidden" : "block"}`}
+      >
+        {selectedIndustries.map((industry: Industry, index) => (
+          <button
+            key={index}
+            onClick={() => removeIndustry(industry)}
+            className="focus:outline-none flex items-center space-x-2 bg-gray-200 rounded-full px-3 py-1"
+          >
+            <span>{industry}</span>
+            <Image src={xIcon} alt="Close Filter" width={14} height={14} />
+          </button>
+        ))}
+      </div>
 
       <div
         ref={industryDropdownRef}
