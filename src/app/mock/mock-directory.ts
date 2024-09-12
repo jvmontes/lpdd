@@ -1,4 +1,4 @@
-import DirectoryOrgType from "../types";
+import { DirectoryOrgType } from "../types";
 
 const mockDirectoryData: DirectoryOrgType[] = [
   {
