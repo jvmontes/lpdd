@@ -86,9 +86,9 @@ export default function Filter({
           selectedIndustries.length === 0 ? "mt-0" : "mt-4"
         } ${isIndustryDropdownOpen ? "hidden" : "block"}`}
       >
-        {selectedIndustries.map((industry: Industry, index) => (
+        {selectedIndustries.map((industry: Industry) => (
           <button
-            key={index}
+            key={industry}
             onClick={() => removeIndustry(industry)}
             className="focus:outline-none flex items-center space-x-2 bg-gray-200 rounded-full px-3 py-1"
           >
