@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <nav className={navClasses}>
       <div className="flex justify-between px-2">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center mr-12">
             <Image
               src="/logo.svg"
               width={40}
