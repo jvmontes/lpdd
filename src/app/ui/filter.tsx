@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import filterIcon from "./icons/filter.svg";
 import xIcon from "./icons/x.svg";
-import checkmarkIcon from "./icons/checkmark.svg";
 import { Industry } from "../types";
 import "./styles/checkbox.css";
 
