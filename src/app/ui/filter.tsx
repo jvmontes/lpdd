@@ -1,7 +1,4 @@
 import { useRef, useEffect } from "react";
-import Image from "next/image";
-import filterIcon from "./icons/filter.svg";
-import xIcon from "./icons/x.svg";
 import { Industry } from "../types";
 import "./styles/checkbox.css";
 
@@ -61,14 +58,31 @@ export default function Filter({
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-[#f0d07d] transition-all ease-out duration-300 ${
-          isIndustryDropdownOpen
-            ? "rounded-t-lg font-semibold"
-            : "rounded-lg font-normal"
-        } `}
+        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-[#f0d07d] 
+          transition-all ease-out duration-300 ${
+            isIndustryDropdownOpen
+              ? "rounded-t-lg font-semibold"
+              : "rounded-lg font-normal"
+          } `}
       >
         <div className="flex items-center">
-          <Image src={filterIcon} alt="Filter Icon" width={20} height={16} />
+          {/* Filter Icon SVG */}
+          <svg
+            width="20"
+            height="16"
+            viewBox="0 0 40 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-foreground"
+          >
+            <path
+              d="M2 2L38 5.11111M6 8.22222L34 11.3333M10 14.4444L30 17.5556M14 20.6667L26 23.7778M18 26.8889L22 30"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+
           <span className="ml-2">Filter by Industry</span>
         </div>
         <div
@@ -76,7 +90,20 @@ export default function Filter({
             isIndustryDropdownOpen ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image src={xIcon} alt="Close Filter" width={14} height={14} />
+          {/* X Icon SVG */}
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 2L11 11M20 20L11 11M11 11L20 2M11 11L2 20"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+          </svg>
         </div>
       </button>
 
@@ -89,17 +116,31 @@ export default function Filter({
           <button
             key={industry}
             onClick={() => removeIndustry(industry)}
-            className="focus:outline-none flex items-center space-x-2 bg-gray-200 rounded-full px-3 py-1"
+            className="focus:outline-none flex items-center space-x-2 rounded-full px-3 py-1
+            bg-gray-200 dark:bg-gray-800"
           >
             <span>{industry}</span>
-            <Image src={xIcon} alt="Close Filter" width={14} height={14} />
+            {/* X Icon SVG */}
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2L11 11M20 20L11 11M11 11L20 2M11 11L2 20"
+                stroke="currentColor"
+                stroke-width="4"
+              />
+            </svg>
           </button>
         ))}
       </div>
 
       <div
         ref={industryDropdownRef}
-        className={`absolute w-full bg-white transition-all ease-out duration-300 transform ${
+        className={`absolute w-full bg-background transition-all ease-out duration-300 transform ${
           isIndustryDropdownOpen
             ? "opacity-100 translate-y-0 max-h-[500px] p-4 shadow-lg border-l border-r border-b border-gray-300 rounded-b-lg"
             : "opacity-0 translate-y-0 max-h-0 p-0 shadow-none border-none"

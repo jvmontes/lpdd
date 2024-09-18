@@ -18,7 +18,11 @@ export default function Directory() {
   return (
     <section className="flex flex-col items-center justify-between pt-8">
       <h1 className="text-center pb-8 text-2xl">Directory</h1>
-      <div className="w-10/12 md:w-3/4 shadow rounded-lg bg-white p-4 min-w-[325px] min-h-[760px] md:min-h-[620px] md:min-w-[684px]">
+      <div
+        className="w-10/12 md:w-3/4 shadow rounded-lg bg-background p-4 
+      min-w-[325px] min-h-[760px] md:min-h-[620px] md:min-w-[684px]
+      dark:shadow-gray-500"
+      >
         <div className="mb-6 md:flex md:gap-x-2">
           <Filter
             industries={industries}
