@@ -4,7 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
+// home - about - contact - login
 const links = [
+  {
+    name: "HOME",
+    href: "/",
+  },
   {
     name: "ABOUT",
     href: "/about",
@@ -13,14 +18,10 @@ const links = [
     name: "CONTACT",
     href: "/contact",
   },
-  {
-    name: "PLACEHOLDER",
-    href: "/placeholder",
-  },
-  {
-    name: "LOGIN",
-    href: "/login",
-  },
+  // {
+  //   name: "LOGIN",
+  //   href: "/login",
+  // },
 ];
 
 
@@ -37,7 +38,7 @@ export default function NavLinks() {
         const isActiveLink = pathname === href;
 
         return (
-          <Link key={name} href={href} className="flex items-center">
+          <Link key={name} href={href}>
             <p
               className={clsx(
                 baseClasses,
