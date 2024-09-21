@@ -26,8 +26,8 @@ export default function HomeHero() {
         />
       </div>
 
-      <div className="absolute bottom-[10%] md:bottom-[20%] left-[5%] flex flex-col-reverse sm:flex-col">
-        <h1 className={`${lexendMedium.className} text-white text-sm md:text-3xl`}>
+      <div className="absolute bottom-[20%] left-[5%] flex flex-col-reverse sm:flex-col">
+        <h1 className={`${lexendMedium.className} text-white text-xs md:text-3xl`}>
           Latiné Professional Development Directory
         </h1>
         <h2 className={`${koulen.className} text-white text-4xl md:text-8xl`}>
