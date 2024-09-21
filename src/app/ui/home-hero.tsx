@@ -14,8 +14,8 @@ const lexendMedium = Lexend({
 
 export default function HomeHero() {
   return (
-    <section className="relative w-full h-[30vh] md:h-[75vh] bg-black"> 
-      <div className="w-full h-full"> 
+    <section className="relative w-full h-[30vh] md:h-[75vh] bg-black">
+      <div className="w-full h-full">
         <Image
           src="/hero.jpg"
           priority={true}
@@ -25,16 +25,22 @@ export default function HomeHero() {
           alt="Group of people listening to a panel discussion with panelists seated on stage."
         />
       </div>
-      <div className="absolute bottom-[10%] md:bottom-[20%] left-[5%]">
-        <h1
-          className={`${lexendMedium.className} text-white text-sm md:text-3xl pb-3`}
-        >
+
+      <div className="absolute bottom-[10%] md:bottom-[20%] left-[5%] flex flex-col-reverse sm:flex-col">
+        <h1 className={`${lexendMedium.className} text-white text-sm md:text-3xl`}>
           Latiné Professional Development Directory
         </h1>
         <h2 className={`${koulen.className} text-white text-4xl md:text-8xl`}>
           Find Your Community
         </h2>
       </div>
+
+      {/* <div>
+        <div className="flex flex-col sm:flex-col-reverse">
+          <h1 className="text-2xl">This is H1</h1>
+          <h2 className="text-xl">This is H2</h2>
+        </div>
+      </div> */}
     </section>
   );
 }
