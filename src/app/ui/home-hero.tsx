@@ -27,11 +27,11 @@ export default function HomeHero() {
       </div>
       <div className="absolute bottom-[10%] md:bottom-[20%] left-[5%]">
         <h1
-          className={`${lexendMedium.className} text-white text-2xl md:text-3xl pb-3`}
+          className={`${lexendMedium.className} text-white text-sm md:text-3xl pb-3`}
         >
           Latiné Professional Development Directory
         </h1>
-        <h2 className={`${koulen.className} text-white text-xl md:text-8xl`}>
+        <h2 className={`${koulen.className} text-white text-4xl md:text-8xl`}>
           Find Your Community
         </h2>
       </div>
