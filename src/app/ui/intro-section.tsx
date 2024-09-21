@@ -20,17 +20,19 @@ const lexend = Lexend({
 
 export default function IntroSection() {
     return (
-        <section className={`w-full py-8 sm:py-20 text-center ${lexend.className}`}>
-            <p className="mx-6 text-xs sm:text-2xl font-medium text-[#717171]">
+        <section
+            className={`w-full py-8 text-center sm:py-20 ${lexend.className}`}
+        >
+            <p className="mx-6 text-xs font-medium text-[#717171] sm:text-2xl">
                 We strive to provide a comprehensive and updated list of
                 organizations that are dedicated to
             </p>
-            <h2 className="mx-6 mb-4 mt-2 text-lg sm:text-4xl font-semibold">
+            <h2 className="mx-6 mb-4 mt-2 text-lg font-semibold sm:mx-auto sm:mb-10 sm:mt-4 sm:max-w-3xl sm:text-4xl">
                 Fostering The Growth And Development Of Latiné Professionals
             </h2>
             <Link
                 href="/about"
-                className="rounded-full border-2 border-[#AF8D86] px-5 sm:px-8 py-1 sm:py-4 text-sm sm:text-2xl font-normal text-[#AF8D86]"
+                className="rounded-full border-2 border-[#AF8D86] px-5 py-1 text-sm font-normal text-[#AF8D86] sm:px-8 sm:py-4 sm:text-2xl"
             >
                 About
             </Link>
