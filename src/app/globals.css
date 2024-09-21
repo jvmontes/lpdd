@@ -9,6 +9,13 @@
   --card-color: #FFFFFF;
   --border-color: #E0E0E0;
   --brand-gold: #F0D07D;
+  --chip-gradient-from: #1e2a4a;
+  --chip-gradient-via: #1a1a40;
+  --chip-gradient-to: #2c2c80;
+  --logo-gradient-from: #e0e0e0;
+  --logo-gradient-via: #a8a8a8;
+  --logo-gradient-to: #3a3a3a;
+  --card-hover: #1f2a44;
 }
 
 @media (prefers-color-scheme: dark) {

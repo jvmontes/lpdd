@@ -118,7 +118,7 @@ export default function Filter({
             onClick={() => removeIndustry(industry)}
             className="focus:outline-none flex items-center space-x-2 rounded-full px-3 py-1
             bg-gray-200 
-            dark:bg-gradient-to-r dark:from-[#1e2a4a] dark:via-[#1a1a40] dark:to-[#2c2c80]"
+            dark:bg-gradient-to-r dark:from-chipGradientFrom dark:via-chipGradientVia dark:to-chipGradientTo"
           >
             <span>{industry}</span>
             {/* X Icon SVG */}
@@ -143,7 +143,7 @@ export default function Filter({
         ref={industryDropdownRef}
         className={`absolute w-full bg-background transition-all ease-out duration-300 transform ${
           isIndustryDropdownOpen
-            ? "opacity-100 translate-y-0 max-h-[500px] p-4 shadow-lg border-l border-r border-b border-gray-300 rounded-b-lg"
+            ? "opacity-100 translate-y-0 max-h-[500px] p-4 shadow-2xl border-l border-r border-b border-border rounded-b-lg"
             : "opacity-0 translate-y-0 max-h-0 p-0 shadow-none border-none"
         } overflow-hidden`}
       >
