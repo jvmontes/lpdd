@@ -9,15 +9,19 @@ export default function DirectoryOrg({
 }: DirectoryOrgType) {
   return (
     <div
-      className="w-full cursor-pointer flex items-center p-4 bg-card-color shadow-lg rounded-lg 
-    hover:bg-[rgba(94,129,244,.1)] dark:hover:bg-[rgba(94,129,244,.2)]  dark:shadow-gray-800
+      className="w-full cursor-pointer flex items-center p-6 bg-card-color shadow-lg rounded-lg 
+    hover:bg-[rgba(94,129,244,.1)] 
+    dark:hover:bg-[#1f2a44]
+    dark:shadow-gray-800
     border border-border
-    transition ease-in-out duration-200"
+    transition ease-in-out duration-300"
     >
       {/* Organization Logo */}
       <div
         className="w-20 md:w-32 h-20 md:h-32 mr-4 flex-shrink-0 rounded-lg p-2
-        dark:bg-gradientEnd"
+        dark:bg-gradient-to-r dark:from-[#e0e0e0] dark:via-[#a8a8a8] dark:to-[#3a3a3a]
+        
+        "
       >
         <Image
           src={logo_url}

@@ -117,7 +117,8 @@ export default function Filter({
             key={industry}
             onClick={() => removeIndustry(industry)}
             className="focus:outline-none flex items-center space-x-2 rounded-full px-3 py-1
-            bg-gray-200 dark:bg-gray-800"
+            bg-gray-200 
+            dark:bg-gradient-to-r dark:from-[#1e2a4a] dark:via-[#1a1a40] dark:to-[#2c2c80]"
           >
             <span>{industry}</span>
             {/* X Icon SVG */}
