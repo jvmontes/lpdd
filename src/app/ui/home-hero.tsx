@@ -18,6 +18,7 @@ export default function HomeHero() {
       <div className="w-full h-full"> 
         <Image
           src="/hero.jpg"
+          priority={true}
           width={2048}
           height={1365}
           className="w-full h-full object-cover object-[0%_80%] opacity-40"
