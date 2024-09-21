@@ -14,14 +14,14 @@ const lexendMedium = Lexend({
 
 export default function HomeHero() {
   return (
-    <section className="relative w-full h-[50vh] md:h-[75vh] bg-black"> 
+    <section className="relative w-full h-[30vh] md:h-[75vh] bg-black"> 
       <div className="w-full h-full"> 
         <Image
           src="/hero.jpg"
           priority={true}
           width={2048}
           height={1365}
-          className="w-full h-full object-cover object-[0%_80%] opacity-40"
+          className="w-full h-full object-cover sm:object-[0%_80%] opacity-40"
           alt="Group of people listening to a panel discussion with panelists seated on stage."
         />
       </div>
