@@ -32,7 +32,7 @@ export default function IntroSection() {
             </h2>
             <Link
                 href="/about"
-                className="rounded-full border-2 border-[#AF8D86] px-5 py-1 text-sm font-normal text-[#AF8D86] sm:px-8 sm:py-4 sm:text-2xl"
+                className="rounded-full border-2 border-[#AF8D86] px-5 py-1 text-sm font-normal text-[#AF8D86] sm:px-8 sm:py-4 sm:text-2xl sm:border-4"
             >
                 About
             </Link>
