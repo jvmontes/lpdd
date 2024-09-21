@@ -58,7 +58,7 @@ export default function Filter({
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-[#f0d07d] 
+        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-brandGold
           transition-all ease-out duration-300 ${
             isIndustryDropdownOpen
               ? "rounded-t-lg font-semibold"
@@ -147,7 +147,10 @@ export default function Filter({
         } overflow-hidden`}
       >
         {industries.map((industry) => (
-          <label key={industry} className="flex items-center space-x-2 mb-2">
+          <label
+            key={industry}
+            className="flex items-center space-x-2 mb-2 cursor-pointer"
+          >
             <input
               type="checkbox"
               checked={selectedIndustries.includes(industry)}

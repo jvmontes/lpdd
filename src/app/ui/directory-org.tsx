@@ -9,12 +9,16 @@ export default function DirectoryOrg({
 }: DirectoryOrgType) {
   return (
     <div
-      className="w-full cursor-pointer flex items-center p-4 bg-background shadow rounded-lg 
-    hover:bg-[rgba(94,129,244,.1)] dark:hover:bg-[rgba(94,129,244,.2)]  dark:shadow-gray-500
+      className="w-full cursor-pointer flex items-center p-4 bg-card-color shadow-lg rounded-lg 
+    hover:bg-[rgba(94,129,244,.1)] dark:hover:bg-[rgba(94,129,244,.2)]  dark:shadow-gray-800
+    border border-border
     transition ease-in-out duration-200"
     >
       {/* Organization Logo */}
-      <div className="w-20 md:w-32 h-20 md:h-32 mr-4 flex-shrink-0">
+      <div
+        className="w-20 md:w-32 h-20 md:h-32 mr-4 flex-shrink-0 rounded-lg p-2
+        dark:bg-gradientEnd"
+      >
         <Image
           src={logo_url}
           alt={`${name} logo`}
@@ -29,7 +33,7 @@ export default function DirectoryOrg({
         <h3 className="text-xl font-semibold">{name}</h3>
         <p
           className="text-sm md:text-base
-        text-gray-600 dark:text-gray-300"
+        text-gray-600 dark:text-gray-400"
         >
           {description}
         </p>
@@ -40,7 +44,7 @@ export default function DirectoryOrg({
               className="flex text-xs items-center space-x-2 rounded-full px-3 py-1
               bg-blue-50 dark:bg-blue-900"
             >
-              <span> {industry_tag}</span>
+              <span>{industry_tag}</span>
             </div>
           ))}
         </div>
