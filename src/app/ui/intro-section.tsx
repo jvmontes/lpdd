@@ -1,18 +1,6 @@
 import { Lexend } from 'next/font/google'
 import Link from 'next/link'
 
-// const lexendRegular = Lexend({
-//   weight: "400",
-//   subsets: ["latin"],
-// });
-// const lexendMedium = Lexend({
-//   weight: "500",
-//   subsets: ["latin"],
-// });
-// const lexendSemi = Lexend({
-//   weight: "600",
-//   subsets: ["latin"],
-// });
 const lexend = Lexend({
     weight: ['400', '500', '600'],
     subsets: ['latin'],
@@ -32,7 +20,7 @@ export default function IntroSection() {
             </h2>
             <Link
                 href="/about"
-                className="rounded-full border-2 border-[#AF8D86] px-5 py-1 text-sm font-normal text-[#AF8D86] sm:px-8 sm:py-4 sm:text-2xl sm:border-4"
+                className="rounded-full border-2 border-[#AF8D86] px-5 py-1 text-sm font-normal text-[#AF8D86] sm:border-4 sm:px-8 sm:py-4 sm:text-2xl"
             >
                 About
             </Link>
