@@ -14,7 +14,7 @@ const lexendMedium = Lexend({
 
 export default function HomeHero() {
   return (
-    <section className="relative w-full h-[30vh] md:h-[75vh] bg-black">
+    <section className="relative w-full h-[25vh] md:h-[50vh] lg:h-[65vh] bg-black">
 
       {/* img div */}
       <div className="w-full h-full">
@@ -23,13 +23,13 @@ export default function HomeHero() {
           priority={true}
           width={2048}
           height={1365}
-          className="w-full h-full object-cover md:object-[0%_70%] opacity-40"
+          className="w-full h-full object-cover lg:object-[30%_60%] opacity-40"
           alt="Group of people listening to a panel discussion with panelists seated on stage."
         />
       </div>
 
       {/* headers div */}
-      <div className="absolute bottom-[20%] left-[5%] flex flex-col-reverse md:flex-col">
+      <div className="absolute bottom-[25%] left-[5%] flex flex-col-reverse md:flex-col">
         <h1 className={`${lexendMedium.className} text-white text-xs md:text-3xl`}>
           Latiné Professional Development Directory
         </h1>
@@ -37,7 +37,7 @@ export default function HomeHero() {
           Find Your Community
         </h2>
       </div>
-      
+
     </section>
   );
 }
