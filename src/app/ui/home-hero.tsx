@@ -33,7 +33,7 @@ export default function HomeHero() {
         <h1 className={`${lexendMedium.className} text-white text-xs md:text-3xl`}>
           Latiné Professional Development Directory
         </h1>
-        <h2 className={`${koulen.className} text-white text-4xl md:text-8xl`}>
+        <h2 className={`${koulen.className} text-white text-4xl md:text-9xl`}>
           Find Your Community
         </h2>
       </div>
