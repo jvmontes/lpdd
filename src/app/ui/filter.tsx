@@ -79,8 +79,8 @@ export default function Filter({
             <path
               d="M2 2L38 5.11111M6 8.22222L34 11.3333M10 14.4444L30 17.5556M14 20.6667L26 23.7778M18 26.8889L22 30"
               stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
+              strokeWidth="3"
+              strokeLinecap="round"
             />
           </svg>
 
@@ -102,7 +102,7 @@ export default function Filter({
             <path
               d="M2 2L11 11M20 20L11 11M11 11L20 2M11 11L2 20"
               stroke="currentColor"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
         </div>
