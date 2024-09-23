@@ -1,44 +1,51 @@
+"use client";
+import { useState } from "react";
 import DirectoryOrg from "./directory-org";
+import mockDirectoryData from "../mock/mock-directory";
+import { Industry } from "../types";
+
+import Filter from "./filter";
+// import SearchBar from "./search-bar";
 
 export default function Directory() {
-  return (
-    <section className="w-10/12 md:w-3/4">
-      <h1 className="pb-8 text-center">Directory</h1>
-      {/* Header with search bar and industry tags */}
-      <div className="mb-6">
-        <input
-          type="text"
-          placeholder="Search organizations..."
-          className="w-full rounded-lg border border-gray-300 p-2"
-        />
-        <div className="mt-4 flex space-x-2">
-          {/* Example industry tags */}
-          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
-            Tech
-          </span>
-          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
-            Healthcare
-          </span>
-          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
-            Finance
-          </span>
-        </div>
-      </div>
+  const [isIndustryDropdownOpen, setIsIndustryDropdownOpen] = useState(false);
+  const [selectedIndustries, setSelectedIndustries] = useState<Industry[]>([]);
 
-      {/* Static list of DirectoryOrg components */}
-      <div className="grid gap-4">
-        <DirectoryOrg
-          logo="/path/to/logo.png"
-          title="Techqueria"
-          description="A short description about Org 1."
-          industry="Tech"
-        />
-        <DirectoryOrg
-          logo="/path/to/logo.png"
-          title="ALPFA"
-          description="A short description about Org 2."
-          industry="Healthcare"
-        />
+  const industries: Industry[] = Object.values(Industry).sort((a, b) =>
+    a.localeCompare(b)
+  );
+
+  return (
+    <section className="mb-4 flex flex-col items-center pt-8">
+      <h1 className="pb-8 text-center text-2xl">Directory</h1>
+      <div className="bg-background border-border min-h-[760px] w-10/12 min-w-[325px] rounded-lg border p-4 shadow-lg md:min-h-[620px] md:w-3/4 md:min-w-[684px] dark:shadow-gray-800">
+        <div className="mb-6 md:flex md:gap-x-2">
+          <Filter
+            industries={industries}
+            selectedIndustries={selectedIndustries}
+            setSelectedIndustries={setSelectedIndustries}
+            isIndustryDropdownOpen={isIndustryDropdownOpen}
+            setIsIndustryDropdownOpen={setIsIndustryDropdownOpen}
+          />
+
+          {/* <SearchBar></SearchBar> */}
+        </div>
+
+        <div className="grid gap-4">
+          {mockDirectoryData
+            .filter((org) => {
+              if (selectedIndustries.length === 0) {
+                return true;
+              }
+
+              return org.industry_tags.some((tag) =>
+                selectedIndustries.includes(tag)
+              );
+            })
+            .map((org) => (
+              <DirectoryOrg key={org.id} {...org} />
+            ))}
+        </div>
       </div>
     </section>
   );

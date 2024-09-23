@@ -6,31 +6,42 @@ import clsx from "clsx";
 
 const links = [
   {
-    name: "About",
+    name: "HOME",
+    href: "/",
+  },
+  {
+    name: "ABOUT",
     href: "/about",
   },
   {
-    name: "Contact",
+    name: "CONTACT",
     href: "/contact",
   },
+  // {
+  //   name: "LOGIN",
+  //   href: "/login",
+  // },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
+
+  const activeClasses = "text-blue-300 underline scale-95";
+  const inactiveClasses = "text-white";
+
   return (
-    <div className="flex justify-end">
-      {links.map((link) => {
-        const isActiveLink = pathname === link.href;
+    <div className="flex">
+      {links.map(({ name, href }) => {
+        const isActiveLink = pathname === href;
 
         return (
-          <Link key={link.name} href={link.href}>
+          <Link key={name} href={href}>
             <p
-              className={clsx(
-                "px-4",
-                isActiveLink ? "text-gray-800 underline" : "text-blue-800"
-              )}
+              className={`text-sm pr-2 tracking-tighter sm:pl-8 sm:tracking-normal
+                transition ease-in-out duration-300
+                ${clsx(isActiveLink ? activeClasses : inactiveClasses)}`}
             >
-              {link.name}
+              {name}
             </p>
           </Link>
         );
