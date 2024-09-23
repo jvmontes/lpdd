@@ -101,7 +101,7 @@ export default function Filter({
             <path
               d="M2 2L11 11M20 20L11 11M11 11L20 2M11 11L2 20"
               stroke="currentColor"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
         </div>
