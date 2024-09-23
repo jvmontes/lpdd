@@ -21,6 +21,7 @@ const config: Config = {
         gradientStart: "var(--background-start-color)",
         gradientEnd: "var(--background-end-color)",
         brandGold: "var(--brand-gold)",
+        brandDustyRose: "var(--brand-dusty-rose)",
         chipGradientFrom: "var(--chip-gradient-from)",
         chipGradientVia: "var(--chip-gradient-via)",
         chipGradientTo: "var(--chip-gradient-to)",

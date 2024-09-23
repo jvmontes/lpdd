@@ -9,9 +9,9 @@ export default function Home() {
       <HomeHero></HomeHero>
       <IntroSection />
 
-      <div>
+      {/* <div>
         <p>Placeholder Featured Organizations</p>
-      </div>
+      </div> */}
 
       <Directory></Directory>
     </main>
