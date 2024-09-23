@@ -58,7 +58,7 @@ export default function Filter({
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`md:w-1/2 flex items-center justify-between px-4 py-2 md:h-12 
+        className={`w-full md:w-1/2 flex items-center justify-between px-4 py-2 md:h-12 
           bg-brandGold hover:shadow-lg
           transition-all ease-out duration-300 ${
             isIndustryDropdownOpen
@@ -141,7 +141,7 @@ export default function Filter({
 
       <div
         ref={industryDropdownRef}
-        className={`absolute w-full bg-background transition-all ease-out duration-300 transform ${
+        className={`absolute w-full md:w-1/2 bg-background transition-all ease-out duration-300 transform ${
           isIndustryDropdownOpen
             ? "opacity-100 translate-y-0 max-h-[500px] p-4 shadow-2xl border-l border-r border-b border-border rounded-b-lg"
             : "opacity-0 translate-y-0 max-h-0 p-0 shadow-none border-none"

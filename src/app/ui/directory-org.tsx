@@ -9,7 +9,7 @@ export default function DirectoryOrg({
 }: DirectoryOrgType) {
   return (
     <div
-      className="w-full cursor-pointer flex items-center p-6 bg-card shadow-lg rounded-lg 
+      className="w-full cursor-pointer flex flex-col sm:flex-row items-center p-6 bg-card shadow-lg rounded-lg 
     hover:bg-cardHover
     border border-border shadow-gray-300
     dark:shadow-gray-800
@@ -17,7 +17,8 @@ export default function DirectoryOrg({
     >
       {/* Organization Logo */}
       <div
-        className="w-20 md:w-32 h-20 md:h-32 mr-4 flex-shrink-0 rounded-lg p-2
+        className="w-36 sm:w-32 h-36 sm:h-32 flex-shrink-0 rounded-lg p-2
+        mb-4 sm:mr-4 sm:mb-0
         dark:bg-gradient-to-r dark:from-logoGradientFrom dark:via-logoGradientVia dark:to-logoGradientTo
         "
       >
@@ -43,7 +44,7 @@ export default function DirectoryOrg({
           {industry_tags.map((industry_tag, index) => (
             <div
               key={index}
-              className="flex text-xs items-center space-x-2 rounded-full px-3 py-1
+              className="flex-shrink-0 text-xs items-center space-x-2 rounded-full px-3 py-1
               bg-blue-50 dark:bg-blue-900"
             >
               <span>{industry_tag}</span>
