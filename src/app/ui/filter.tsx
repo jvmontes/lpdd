@@ -54,11 +54,11 @@ export default function Filter({
   };
 
   return (
-    <div className="md:w-1/2 relative mt-4 md:mt-0">
+    <div className="md:w-full relative mt-4 md:mt-0">
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 
+        className={`md:w-1/2 flex items-center justify-between px-4 py-2 md:h-12 
           bg-brandGold hover:shadow-lg
           transition-all ease-out duration-300 ${
             isIndustryDropdownOpen

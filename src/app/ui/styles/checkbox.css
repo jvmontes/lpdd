@@ -27,6 +27,6 @@ input[type="checkbox"]:checked::before {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:hover {
+input[type="checkbox"]:not(:checked):hover {
   background-color: rgba(204, 149, 9, 0.1);
 }
