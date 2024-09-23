@@ -58,7 +58,8 @@ export default function Filter({
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 bg-brandGold
+        className={`w-full flex items-center justify-between px-4 py-2 md:h-12 
+          bg-brandGold hover:shadow-lg
           transition-all ease-out duration-300 ${
             isIndustryDropdownOpen
               ? "rounded-t-lg font-semibold"

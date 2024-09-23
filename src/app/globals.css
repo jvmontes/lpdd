@@ -6,7 +6,7 @@
   --foreground-color: #000000;
   --background-start-color: #FFFFFF;
   --background-end-color: #8FB8DE66;
-  --card-color: #FFFFFF;
+  --card-color: #f9f9f9;
   --border-color: #E0E0E0;
   --brand-gold: #F0D07D;
   --chip-gradient-from: #1e2a4a;
@@ -15,7 +15,7 @@
   --logo-gradient-from: #e0e0e0;
   --logo-gradient-via: #a8a8a8;
   --logo-gradient-to: #3a3a3a;
-  --card-hover: #1f2a44;
+  --card-hover: #d3e8f2;
 }
 
 @media (prefers-color-scheme: dark) {
