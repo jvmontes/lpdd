@@ -3,23 +3,23 @@ import DirectoryOrg from "./directory-org";
 export default function Directory() {
   return (
     <section className="w-10/12 md:w-3/4">
-      <h1 className="text-center pb-8">Directory</h1>
+      <h1 className="pb-8 text-center">Directory</h1>
       {/* Header with search bar and industry tags */}
       <div className="mb-6">
         <input
           type="text"
           placeholder="Search organizations..."
-          className="w-full p-2 border border-gray-300 rounded-lg"
+          className="w-full rounded-lg border border-gray-300 p-2"
         />
-        <div className="flex mt-4 space-x-2">
+        <div className="mt-4 flex space-x-2">
           {/* Example industry tags */}
-          <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">
+          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
             Tech
           </span>
-          <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">
+          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
             Healthcare
           </span>
-          <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">
+          <span className="rounded-full bg-gray-200 px-3 py-1 text-sm">
             Finance
           </span>
         </div>

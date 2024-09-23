@@ -1,12 +1,12 @@
 export default function DirectoryOrg({ logo, title, description, industry }) {
   return (
-    <div className="flex items-center p-4 bg-white shadow rounded-lg">
+    <div className="flex items-center rounded-lg bg-white p-4 shadow">
       {/* Organization Logo */}
-      <div className="w-16 h-16 mr-4">
+      <div className="mr-4 h-16 w-16">
         <img
           src={logo}
           alt={`${title} logo`}
-          className="w-full h-full object-cover rounded-full"
+          className="h-full w-full rounded-full object-cover"
         />
       </div>
 
