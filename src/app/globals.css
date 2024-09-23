@@ -3,24 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 143, 184, 222, 0.4;
+  --foreground-color: #000000;
+  --background-start-color: #FFFFFF;
+  --background-end-color: #8FB8DE66;
+  --card-color: #f9f9f9;
+  --card-hover: #d3e8f2;
+  --border-color: #E0E0E0;
+  --brand-gold: #F0D07D;
+
+  --chip-gradient-from: #e6f0fc;
+  --chip-gradient-via: #d3e8f2;
+  --chip-gradient-to: #c2dfee;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-color: #FFFFFF;
+    --background-start-color: #121212;
+    --background-end-color: #1A1A2E;
+    --card-color: #171717;
+    --card-hover: #2a2a3d;
+    --border-color: #3c3c3c;
+    --brand-gold: #8A6D3B;
+
+    --chip-gradient-from: #1e2a4a;
+    --chip-gradient-via: #1a1a40;
+    --chip-gradient-to: #2c2c80;
+
+    --logo-gradient-from: #e0e0e0;
+    --logo-gradient-via: #a8a8a8;
+    --logo-gradient-to: #3a3a3a;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-color);
   background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      var(--background-end-color)) var(--background-start-color);
 }
 
 @layer utilities {
