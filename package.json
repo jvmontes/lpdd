@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "migration:generate": "drizzle-kit generate",
-    "migration:apply": "drizzle-kit migrate"
+    "migration:apply": "drizzle-kit migrate",
+    "dbdocs:login": "npx dbdocs login",
+    "dbdocs:build": "npx dbdocs build database.dbml"
   },
   "dependencies": {
     "@next/env": "^14.2.5",
