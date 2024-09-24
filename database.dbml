@@ -1,0 +1,20 @@
+Table "lpdd"."organization_contacts" {
+  "id" int4 [pk, not null, increment]
+  "first_name" text [not null]
+  "last_name" text [not null]
+  "email" text [unique, not null]
+  "organization_id" int4
+}
+
+Table "lpdd"."organizations" {
+  "id" int4 [pk, not null, increment]
+  "name" text [not null]
+  "logo_url" text
+  "description" text
+  "industry" text
+  "website_url" text [not null]
+  "city" text [not null]
+  "region" text
+}
+
+Ref "organization_contacts_organization_id_organizations_id_fk":"lpdd"."organizations"."id" < "lpdd"."organization_contacts"."organization_id"

@@ -67,3 +67,19 @@ brew install postgresql
 Another easier way is to use supabase or render database instances. You can find the env variables in the dashboard for those services.
 
 NOTE: More details [here](drizzle/README.md)
+
+### Database Documentation (Dbdocs)
+
+We use **dbdocs** to generate and maintain documentation for the database schema. The documentation is stored and versioned, and can be viewed locally for internal use.
+
+#### Prerequisites
+
+- **dbdocs CLI**: You can install the dbdocs CLI tool globally like below. Note: This is only necessary if you are going to use db2dbml commands or similar. Basic commands are implemented via npx in our scripts. See `dbdocs:login` and `dbdocs:build`.
+
+#### Installation (optional)
+
+1. **Install the Dbdocs CLI**:
+   Run the following command to install Dbdocs globally:
+   ```bash
+   npm install -g dbdocs
+   ```
