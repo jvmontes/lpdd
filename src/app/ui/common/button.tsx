@@ -9,7 +9,7 @@ export default function Button({ href, title }: ButtonProps) {
   return (
     <Link
       href={href}
-      className="rounded-full border-2 border-brandDustyRose px-5 py-1 text-sm font-normal text-brandDustyRose sm:border-4 sm:px-8 sm:py-4 sm:text-2xl"
+      className="rounded-full border-2 border-slate-900 px-5 py-1 text-sm font-normal text-slate-900 sm:border-4 sm:px-8 sm:py-4 sm:text-2xl dark:border-white dark:text-white"
     >
       {title}
     </Link>

@@ -58,7 +58,7 @@ export default function Filter({
       <button
         ref={industryDropdownButtonRef}
         onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
-        className={`bg-brandGold flex w-full items-center justify-between px-4 py-2 transition-all duration-300 ease-out hover:shadow-lg md:h-12 md:w-1/2 ${
+        className={`bg-brandGold flex w-full items-center justify-between px-4 py-2 transition-all duration-300 ease-out hover:shadow-lg md:h-12 md:w-1/2 dark:text-black ${
           isIndustryDropdownOpen
             ? "rounded-t-lg font-semibold"
             : "rounded-lg font-normal"
@@ -72,7 +72,7 @@ export default function Filter({
             viewBox="0 0 40 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-foreground"
+            className="text-black"
           >
             <path
               d="M2 2L38 5.11111M6 8.22222L34 11.3333M10 14.4444L30 17.5556M14 20.6667L26 23.7778M18 26.8889L22 30"
