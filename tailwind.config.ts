@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         foreground: "var(--foreground-color)",
+        secondary: "var(--secondary-text)",
         background: "var(--background-start-color)",
         card: "var(--card-color)",
         border: "var(--border-color)",
@@ -34,4 +35,5 @@ const config: Config = {
   plugins: [],
   darkMode: "media",
 };
+
 export default config;
